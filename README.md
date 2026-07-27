@@ -1,6 +1,6 @@
 # Dairy Products Consumption Analysis (India, 2019-2022)
 
-This repository contains a Python-based data analysis project focused on dairy product sales, pricing, revenue, and inventory patterns in India. The work is organized as a collection of Jupyter notebooks that clean data, explore relationships, and build statistical and machine learning models.
+This repository contains a Python-based data analysis project focused on dairy product sales, pricing, revenue, and inventory patterns in India. The work is organized as a collection of Jupyter notebooks and supporting files for analysis and visualization.
 
 ## Project Overview
 
@@ -63,6 +63,41 @@ The project uses an open-source dataset from Kaggle:
    jupyter lab
    ```
 4. Open the notebooks in the notebooks/ folder and run them in order.
+
+## Virtual environment (recommended)
+
+To keep dependencies isolated and reproducible, create a virtual environment before installing packages. Below are two common options: Python's built-in `venv` and Conda.
+
+- Using Python venv (cross-platform):
+  ```bash
+  # create a virtual environment named .venv
+  python3 -m venv .venv
+
+  # macOS / Linux
+  source .venv/bin/activate
+
+  # Windows (PowerShell)
+  .\.venv\Scripts\Activate.ps1
+
+  # Windows (cmd.exe)
+  .\.venv\Scripts\activate.bat
+
+  # then install requirements
+  pip install --upgrade pip
+  pip install -r requirements.txt
+  ```
+
+- Using Conda (if you use Anaconda/Miniconda):
+  ```bash
+  conda create -n dairy-env python=3.10
+  conda activate dairy-env
+  pip install -r requirements.txt
+  ```
+
+Notes:
+- Replace `python3`/`python` with your desired Python executable if you manage multiple versions. We recommend Python 3.8+ (3.10+ is a good choice).
+- After finishing work, deactivate the environment with `deactivate` (venv) or `conda deactivate` (Conda).
+- If you plan to re-create the environment elsewhere, consider exporting installed packages (`pip freeze > requirements-freeze.txt`) and committing only the canonical `requirements.txt` used for development.
 
 ## Requirements
 
